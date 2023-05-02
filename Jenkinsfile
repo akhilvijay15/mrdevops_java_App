@@ -2,15 +2,14 @@ pipleline{
 
         agent any
 
-    stages{
-
+        stages{
+         
         stage('Git Checkout'){
-
+                    when { expression {  params.action == 'create' } }
             steps{
-             
-                scripts{
+            gitCheckout(
 
-                git branch: 'main', url: 'https://github.com/akhilvijay15/mrdevops_java_App.git'
+                git branch: 'main', url: 'https://github.com/akhilvijay15/mrdevops_java_App.git')
              }
 
             }
