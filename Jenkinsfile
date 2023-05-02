@@ -1,6 +1,6 @@
 pipleline{
 
-    agent any
+        agent any
 
     stages{
 
@@ -8,7 +8,7 @@ pipleline{
 
             steps{
              
-             scripts{
+                scripts{
 
                 git branch: 'main', url: 'https://github.com/akhilvijay15/mrdevops_java_App.git'
              }
